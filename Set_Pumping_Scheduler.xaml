@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AquaSmart.Set_Pumping_Scheduler">
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Frame x:Name="set_pumping" BackgroundColor="DarkBlue" WidthRequest="100"  HeightRequest="30">
+                <Label Text="Pumping Scheduler" TextColor="White" FontSize="20"></Label>
+            </Frame>
+                <Label x:Name="time_pick" Text="Time:" TextColor="Black" FontAttributes="Bold" FontSize="20"></Label>
+                <Grid>
+                    <Grid.RowDefinitions></Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+                    <Label x:Name="startTime" Text="Start Time" TextColor="Gray" FontSize="Default" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  ></Label>
+                    <Label x:Name="endTime" Text="End Time" TextColor="Gray" FontSize="Default" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" ></Label>
+                <TimePicker x:Name="start_clock"  HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"></TimePicker>
+                <TimePicker x:Name="end_clock"  HorizontalOptions="Center"  Grid.Row="1" Grid.Column="1"></TimePicker>
+                </Grid>
+            <Label Text="Days:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+            <StackLayout Orientation="Horizontal" Spacing="-1"  VerticalOptions="CenterAndExpand">
+                <Label x:Name="Mon" Text="MON" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Tue" Text="TUE" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Wed" Text="WED" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Thu" Text="THU" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Fri" Text="FRI" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Sat" Text="SAT" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+                <Label x:Name="Sun" Text="SUN" TextColor="Black" BackgroundColor="Aqua" Scale="1.0" HorizontalOptions="CenterAndExpand"  ></Label>
+            
+            </StackLayout>
+
+
+            <Button x:Name="save" Text="Save" TextColor="Black" BackgroundColor="Aqua" VerticalOptions="EndAndExpand" Clicked="save_Clicked"></Button>
+         
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
